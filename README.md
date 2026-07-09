@@ -1,6 +1,3 @@
-# Sistem_Penjualan_Tiket
-Sistem Informasi Penjualan Tiket berbasis Java Desktop (Swing) dan MySQL. Tugas Akhir / UAS Mata Kuliah Pemrograman Berorientasi Objek (PBO) - ITB STIKOM Bali.
-
 # 🎟️ Sistem Informasi Penjualan Tiket Berbasis Java Desktop
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -15,7 +12,7 @@ Proyek ini merupakan **Tugas Akhir / Ujian Akhir Semester (UAS)** untuk mata kul
 
 | Nama Pengembang | NIM | Peran (Role) | Jaringan |
 | :--- | :---: | :---: | :---: |
-| **I Kadek Sandyarthana P. S.** | 250040014 | Lead Programmer & UI/UX Designer | [@Sandya_cx](https://instagram.com/Sandya_cx) |
+| **I Kadek Sandyarthana Putra Sukarsa** | 250040014 | Lead Programmer & UI/UX Designer | [@Sandya_cx](https://instagram.com/Sandya_cx) |
 | **Frederico Wijaya** | 250040057 | Database Administrator & QA | [@rrco.077](https://www.instagram.com/rrco.077/) |
 
 * **Dosen Pengampu:** Made Agus Putra Subali, S.Kom., M.Kom.
@@ -40,8 +37,43 @@ Sistem_Penjualan_Tiket/
 ├── src/              # Source Code Utama (*.java)
 │   ├── database/     # Kelas Koneksi DB
 │   ├── model/        # Kelas Entitas Data
-│   └── view/         # Komponen Panel GUI (MainFrame, dll)
+│   ├── view/         # Komponen Panel GUI (MainFrame, dll)
+│   └── lib/          # External Library (Driver JDBC MySQL)
 ├── assets/           # Aset Statis / Foto Profil Tim
-├── lib/              # External Library (Driver JDBC MySQL)
 ├── README.md         # Dokumentasi Repositori
 └── database_tiket.sql # File Backup Database
+
+---
+
+## 🛠️ Panduan Instalasi & Menjalankan Aplikasi
+
+### Persyaratan Sistem (Prerequisites)
+* Java Development Kit (JDK) versi 11 atau yang lebih baru.
+* Web Server lokal XAMPP (untuk mengaktifkan MySQL).
+* IDE Visual Studio Code beserta *Extension Pack for Java*.
+
+### Langkah-Langkah Pemasangan
+
+1. **Konfigurasi Database:**
+   * Aktifkan modul **Apache** dan **MySQL** pada XAMPP Control Panel.
+   * Akses `http://localhost/phpmyadmin/` di browser kamu.
+   * Buat database baru dengan nama `database_tiket`.
+   * Pilih database tersebut, masuk ke menu **Import**, pilih file `database_tiket.sql` dari folder proyek ini, lalu klik **Go**.
+
+2. **Kloning Repositori:**
+   ```bash
+   git clone [https://github.com/sanydarthana/Sistem_Penjualan_Tiket.git](https://github.com/sanydarthana/Sistem_Penjualan_Tiket.git)
+   ```
+
+3. **Membuka Proyek di VS Code:**
+   * Pilih **Open Folder...** di VS Code dan pastikan kamu memilih folder terluar (`Sistem_Penjualan_Tiket`), **bukan** folder `src`.
+
+4. **Menghubungkan Library JDBC:**
+   * Pada panel kiri VS Code, cari bagian **Java Projects** -> **Referenced Libraries**.
+   * Klik ikon `+` (Plus) di sebelah kanan, lalu pilih file `.jar` yang terletak di dalam folder `lib/`.
+
+5. **Menjalankan Program:**
+   * Buka file `src/view/MainFrame.java`.
+   * Tekan tombol **F5** pada keyboard untuk menjalankan aplikasi lewat *debugger* resmi (agar sinkronisasi *Current Working Directory* untuk folder `assets` berjalan sempurna).
+   * **Kredensial Login Default:** Username: `admin` \| Password: `admin123`.
+```
