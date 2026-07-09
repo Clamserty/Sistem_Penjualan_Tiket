@@ -91,7 +91,7 @@ Aplikasi ini memiliki 4 alur antarmuka utama yang saling terikat:
 1. MODUL LOGIN SYSTEM (Gerbang Keamanan)
    * Saat pertama kali dijalankan, seluruh menu navigasi atas dikunci.
    * Masukkan kredensial akun yang valid dari database.
-     [Catatan: Default Akun -> Username: admin | Password: admin]
+     [Catatan: Default Akun -> Username: admin | Password: admin123]
    * Jika sukses, sistem akan membuka seluruh hak akses navigasi dan 
      mencatat nama Anda pada Status Bar di pojok kiri bawah.
 
