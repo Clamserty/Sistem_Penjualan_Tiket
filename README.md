@@ -15,7 +15,7 @@ Proyek ini merupakan **Tugas Akhir / Ujian Akhir Semester (UAS)** untuk mata kul
 | **I Kadek Sandyarthana Putra Sukarsa** | 250040014 | Lead Programmer & UI/UX Designer | [@Sandya_cx](https://instagram.com/Sandya_cx) |
 | **Frederico Wijaya** | 250040057 | Database Administrator & QA | [@rrco.077](https://www.instagram.com/rrco.077/) |
 
-* **Dosen Pengampu:** Made Agus Putra Subali, S.Kom., M.Kom.
+* **Dosen Pengampu:** Made Agus Putra Subali, S.Kom., M.Kom. 
 
 ---
 
@@ -33,7 +33,6 @@ Proyek ini merupakan **Tugas Akhir / Ujian Akhir Semester (UAS)** untuk mata kul
 
 ```text
 Sistem_Penjualan_Tiket/
-├── .vscode/          # Konfigurasi CWD Workspace VS Code
 ├── src/              # Source Code Utama (*.java)
 │   ├── database/     # Kelas Koneksi DB
 │   ├── model/        # Kelas Entitas Data
@@ -41,6 +40,7 @@ Sistem_Penjualan_Tiket/
 │   └── lib/          # External Library (Driver JDBC MySQL)
 ├── assets/           # Aset Statis / Foto Profil Tim
 ├── README.md         # Dokumentasi Repositori
+├── README.txt        # Dokumentasi Lebih Lengkap 
 └── database_tiket.sql # File Backup Database
 ```
 
@@ -77,4 +77,3 @@ Sistem_Penjualan_Tiket/
    * Buka file `src/view/MainFrame.java`.
    * Tekan tombol **F5** pada keyboard untuk menjalankan aplikasi lewat *debugger* resmi (agar sinkronisasi *Current Working Directory* untuk folder `assets` berjalan sempurna).
    * **Kredensial Login Default:** Username: `admin` \| Password: `admin123`.
-```
