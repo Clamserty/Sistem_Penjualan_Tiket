@@ -63,7 +63,7 @@ Sistem_Penjualan_Tiket/
 
 2. **Kloning Repositori:**
    ```bash
-   git clone [https://github.com/sanydarthana/Sistem_Penjualan_Tiket.git](https://github.com/sanydarthana/Sistem_Penjualan_Tiket.git)
+   git clone [https://github.com/Clamserty/Sistem_Penjualan_Tiket.git](https://github.com/Clamserty/Sistem_Penjualan_Tiket.git)
    ```
 
 3. **Membuka Proyek di VS Code:**
