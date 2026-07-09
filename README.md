@@ -42,6 +42,7 @@ Sistem_Penjualan_Tiket/
 ├── assets/           # Aset Statis / Foto Profil Tim
 ├── README.md         # Dokumentasi Repositori
 └── database_tiket.sql # File Backup Database
+```
 
 ---
 
