@@ -71,7 +71,7 @@ public class AboutUsPanel extends JPanel {
         panelBawah.setOpaque(false);
 
         // Tombol Buka Bantuan / Panduan Aplikasi
-        JButton btnReadme = new JButton("[?] Buka Panduan Pengguna (README.txt)");
+        JButton btnReadme = new JButton("[?] Buka Panduan Pengguna (PETUNJUK_PANDUAN.txt)");
         btnReadme.setFont(new Font("Arial", Font.BOLD, 12));
         btnReadme.setCursor(new Cursor(Cursor.HAND_CURSOR));
         btnReadme.setBackground(new Color(52, 152, 219));
@@ -160,13 +160,13 @@ public class AboutUsPanel extends JPanel {
 
     private void aksiBukaReadme() {
         try {
-            // Membaca file README.txt
-            File file = new File("README.txt");
+            // Membaca file PETUNJUK_PANDUAN.txt
+            File file = new File("PETUNJUK_PANDUAN.txt");
             if (file.exists()) {
                 Desktop.getDesktop().open(file);
             } else {
                 JOptionPane.showMessageDialog(this, 
-                    "File README.txt belum dibuat atau tidak ditemukan di root direktori proyek!", 
+                    "File PETUNJUK_PANDUAN.txt belum dibuat atau tidak ditemukan di root direktori proyek!", 
                     "Panduan Tidak Ditemukan", JOptionPane.ERROR_MESSAGE);
             }
         } catch (Exception ex) {
