@@ -33,15 +33,15 @@ Proyek ini merupakan **Tugas Akhir / Ujian Akhir Semester (UAS)** untuk mata kul
 
 ```text
 Sistem_Penjualan_Tiket/
-├── src/              # Source Code Utama (*.java)
-│   ├── database/     # Kelas Koneksi DB
-│   ├── model/        # Kelas Entitas Data
-│   ├── view/         # Komponen Panel GUI (MainFrame, dll)
-│   └── lib/          # External Library (Driver JDBC MySQL)
-├── assets/           # Aset Statis / Foto Profil Tim
-├── README.md         # Dokumentasi Repositori
-├── README.txt        # Dokumentasi Lebih Lengkap 
-└── database_tiket.sql # File Backup Database
+├── src/                # Source Code Utama (*.java)
+│   ├── database/       # Kelas Koneksi DB
+│   ├── model/          # Kelas Entitas Data
+│   ├── view/           # Komponen Panel GUI (MainFrame, dll)
+│   └── lib/            # External Library (Driver JDBC MySQL)
+├── assets/             # Aset Statis / Foto Profil Tim
+├── PETUNJUK_PANDUAN.md # Dokumentasi Cara Pengunaan lengkap
+├── README.txt          # Dokumentasi Lebih Lengkap 
+└── database_tiket.sql  # File Backup Database
 ```
 
 ---
