@@ -13,10 +13,10 @@
 * Tahun Akademik    : 2026
 
 * Tim Pengembang    :
-  1. I Kadek Sandyarthana P. S. (Inisial: ss)
+  1. I Kadek Sandyarthana Putra Sukarsa (ss)
      NIM  : 250040014
      Role : Lead Programmer & UI/UX Designer
-  2. Frederico Wijaya
+  2. Frederico Wijaya (fw)
      NIM  : 250040057
      Role : Database Administrator & Quality Assurance (QA)
 
@@ -32,20 +32,19 @@ real-time dengan validasi stok otomatis.
 ------------------------------------------------------------------------
 3. STRUKTUR DIREKTORI PROYEK
 ------------------------------------------------------------------------
-Sistem_Penjualan_Tiket/     <-- Direktori Utama (Workspace Root)
-├── .vscode/                <-- Konfigurasi Workspace VS Code
-│   └── launch.json         <-- Pengaturan CWD agar path file aman
-├── src/                    <-- Source Code Java
-│   ├── database/           <-- Kelas Koneksi DB (Koneksi.java)
-│   ├── model/              <-- Kelas Entitas Data
-│   └── view/               <-- Semua Komponen Panel GUI (MainFrame, dll)
-|   └── lib/                <-- Tempat External Library / Driver
-│       └── mysql-connector-j-x.x.jar <-- Driver JDBC MySQL
-├── assets/                 <-- Penyimpanan Media / Foto Tim
-│   ├── sandya.png          <-- Foto Profil Developer 1
-│   └── rico.jpg            <-- Foto Profil Developer 2
-├── README.txt              <-- File Dokumentasi Ini
-└── pbo_db_tiket.sql        <-- File SQL Backup Database
+Sistem_Penjualan_Tiket/       <-- Direktori Utama (Workspace Root)
+├── assets/                   <-- Penyimpanan Media / Foto Tim
+│   ├── sandya.png            <-- Foto Profil Developer 1
+│   └── rico.png              <-- Foto Profil Developer 2
+├── src/                      <-- Source Code Java
+│   ├── database/             <-- Kelas Koneksi DB (Koneksi.java)
+│   ├── model/                <-- Kelas Entitas Data
+│   └── view/                 <-- Semua Komponen Panel GUI (MainFrame, dll)
+│   └──  lib/                 <-- Tempat External Library / Driver
+│        └── mysql-connector-j-x.x.jar <-- Driver JDBC MySQL
+├── Ticket_Sales.exe          <-- File Eksekusi Utama Aplikasi (Siap Pakai) 
+├── DOKUMENTASI_APLIKASI.txt  <-- File Dokumentasi Ini
+└── pbo_db_tiket.sql          <-- File SQL Backup Database
 
 ------------------------------------------------------------------------
 4. KEBUTUHAN SISTEM (PREREQUISITES)
@@ -54,34 +53,48 @@ Untuk menjalankan aplikasi ini dengan lancar, pastikan perangkat Anda
 telah terpasang:
 1. Java Development Kit (JDK) versi 11 atau yang lebih baru.
 2. Web Server lokal (sangat direkomendasikan menggunakan XAMPP).
-3. IDE Visual Studio Code yang sudah terpasang extension:
-   - Extension Pack for Java (oleh Microsoft)
+3. IDE Visual Studio Code (Jika ingin memeriksa/menjalankan source code).
 
 ------------------------------------------------------------------------
 5. PANDUAN INSTALASI & KONFIGURASI 
 ------------------------------------------------------------------------
-Langkah 1: Konfigurasi Database (MySQL)
+Langkah 1: Konfigurasi Database Lokal (Wajib untuk Kedua Metode)
 1. Aktifkan modul Apache dan MySQL pada XAMPP Control Panel.
 2. Buka browser dan akses halaman `http://localhost/phpmyadmin/`.
-3. Buat database baru dengan nama: `database_tiket`.
+3. Buat database baru dengan nama: `pbo_db_tiket`.
 4. Pilih database tersebut, klik menu "Import", pilih file 
-   `database_tiket.sql` yang berada di root folder proyek ini, lalu klik "Go".
+   `pbo_db_tiket.sql` yang berada di root folder proyek ini, lalu klik "Go".
 
-Langkah 2: Membuka Proyek di VS Code
+------------------------------------------------------------------------
+METODE A: MENJALANKAN LEWAT APLIKASI SIAP PAKAI (.EXE) - REKOMENDASI 
+------------------------------------------------------------------------
+Aplikasi telah dibungkus menjadi file eksekusi Windows (.exe) agar dapat
+dijalankan secara instan tanpa perlu membuka IDE/Editor kode.
+
+1. Pastikan Langkah 1 (Konfigurasi Database) di atas sudah selesai dilakukan.
+2. [PENTING] Pastikan web server MySQL Anda menggunakan port default XAMPP (3306), 
+   User: root, dan Tanpa Password (sesuai setelan Koneksi database statis).
+3. Klik dua kali pada file `Ticket_Sales.exe` yang berada di folder utama.
+4. Aplikasi akan langsung terbuka. 
+   [Kredensial Login -> Username: admin | Password: admin123]
+
+------------------------------------------------------------------------
+METODE B: MENJALANKAN LEWAT SOURCE CODE (VS CODE)
+------------------------------------------------------------------------
+Jika Anda ingin memeriksa arsitektur kode atau menjalankan via editor:
+
 1. Buka VS Code.
 2. Pilih "Open Folder..." dan pastikan Anda memilih folder terluar yaitu 
    `Sistem_Penjualan_Tiket` (BUKAN folder src).
-
-Langkah 3: Memastikan Library Terhubung
-1. Di sidebar kiri VS Code, gulir ke bawah pada bagian panel "Java Projects".
-2. Cari menu "Referenced Libraries".
-3. Jika kosong atau terjadi error JDBC, klik ikon "+" di sebelah kanannya, 
-   lalu pilih file `.jar` di dalam folder `lib/mysql-connector-j-x.x.jar`.
-
-Langkah 4: Menjalankan Aplikasi
-1. Buka file `src/view/MainFrame.java`.
-2. Tekan tombol [F5] pada keyboard atau buka tab "Run and Debug" di VS Code 
-   dan klik tombol "Play" hijau untuk mematikan kesalahan direktori kerja (CWD).
+3. Memastikan Library Terhubung:
+   - Di sidebar kiri VS Code, gulir ke bawah ke panel "Java Projects".
+   - Cari menu "Referenced Libraries".
+   - Jika kosong/error, klik ikon "+", lalu pilih file `.jar` di dalam 
+     folder `lib/mysql-connector-j-x.x.jar`.
+4. Menjalankan Program:
+   - Buka file `src/view/MainFrame.java`.
+   - Tekan tombol [F5] pada keyboard (Run and Debug) agar sinkronisasi 
+     direktori kerja (CWD) untuk aset gambar berjalan dengan sempurna.
 
 ------------------------------------------------------------------------
 6. PANDUAN OPERASIONAL FITUR APLIKASI
@@ -91,7 +104,6 @@ Aplikasi ini memiliki 4 alur antarmuka utama yang saling terikat:
 1. MODUL LOGIN SYSTEM (Gerbang Keamanan)
    * Saat pertama kali dijalankan, seluruh menu navigasi atas dikunci.
    * Masukkan kredensial akun yang valid dari database.
-     [Catatan: Default Akun -> Username: admin | Password: admin123]
    * Jika sukses, sistem akan membuka seluruh hak akses navigasi dan 
      mencatat nama Anda pada Status Bar di pojok kiri bawah.
 
@@ -114,21 +126,21 @@ Aplikasi ini memiliki 4 alur antarmuka utama yang saling terikat:
 4. MODUL ABOUT US & HELP (Identitas Tim)
    * Menampilkan profil resmi para pengembang aplikasi beserta foto asli.
    * Menyediakan tombol interaktif terintegrasi yang dapat langsung membuka 
-     file dokumentasi panduan (README.txt) ini secara otomatis lewat sistem.
+     file dokumentasi panduan (.txt) ini secara otomatis lewat sistem.
 
 ------------------------------------------------------------------------
 7. TROUBLESHOOTING (PENANGANAN MASALAH)
 ------------------------------------------------------------------------
-* Masalah: Muncul error "Driver JDBC tidak ditemukan".
-  Solusi : Pastikan file driver mysql-connector di dalam folder `lib` sudah 
-           didaftarkan pada menu "Referenced Libraries" di VS Code Anda.
+* Masalah: File .exe tidak mau terbuka atau langsung tertutup otomatis.
+  Solusi : Pastikan perangkat Anda sudah terinstal Java Runtime (JRE/JDK) 
+           minimal versi 11. Pastikan juga XAMPP MySQL sudah dalam posisi "Start".
 
 * Masalah: Aplikasi berhasil terbuka tetapi data tabel kosong / tidak bisa login.
-  Solusi : Periksa kembali koneksi MySQL di XAMPP Anda. Pastikan database 
-           sudah di-import dengan benar dan sesuaikan konfigurasi user/password 
-           database pada kelas `Koneksi.java`.
+  Solusi : Periksa kembali koneksi MySQL di XAMPP Anda. Pastikan nama database 
+           yang dibuat di phpMyAdmin sudah sesuai, yaitu `pbo_db_tiket`, dan 
+           port yang digunakan adalah port standar 3306.
 
-* Masalah: Foto profil tim atau file README tidak mau terbuka saat diklik.
+* Masalah: Foto profil tim atau file panduan tidak mau terbuka saat diklik (di VS Code).
   Solusi : Anda membuka folder yang salah di VS Code. Pastikan Anda melakukan 
            "Open Folder" pada direktori terluar (`Sistem_Penjualan_Tiket`) 
            dan jalankan program utama menggunakan tombol F5.
