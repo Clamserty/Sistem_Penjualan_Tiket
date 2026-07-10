@@ -52,7 +52,7 @@ Sistem_Penjualan_Tiket/
 > * **Port:** 3306 (Port standar XAMPP)
 > * **Username:** root
 > * **Password:** *(Kosongkan / Tanpa Password)*
-> * **Nama Database:** database_tiket
+> * **Nama Database:** pbo_db_tiket
 >
 > *Jika Port MySQL di XAMPP Anda sudah diubah (misalnya menjadi 3307), mohon sesuaikan kembali ke port standar 3306 sebelum menjalankan file `.exe`.*
 
