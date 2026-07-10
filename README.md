@@ -46,6 +46,18 @@ Sistem_Penjualan_Tiket/
 
 ---
 
+> ### ⚠️ PERHATIAN PENTING UNTUK PENGUJI / DOSEN 
+> Aplikasi `.exe` ini dikonfigurasi menggunakan koneksi database lokal statis. Agar aplikasi dapat berjalan dan terhubung dengan MySQL tanpa *error*, mohon pastikan web server lokal XAMPP Anda menggunakan konfigurasi standar berikut:
+> * **Host:** localhost
+> * **Port:** 3306 (Port standar XAMPP)
+> * **Username:** root
+> * **Password:** *(Kosongkan / Tanpa Password)*
+> * **Nama Database:** database_tiket
+>
+> *Jika Port MySQL di XAMPP Anda sudah diubah (misalnya menjadi 3307), mohon sesuaikan kembali ke port standar 3306 sebelum menjalankan file `.exe`.*
+
+---
+
 ## 🛠️ Panduan Instalasi & Menjalankan Aplikasi
 
 ### Persyaratan Sistem (Prerequisites)
